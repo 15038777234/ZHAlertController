@@ -106,7 +106,7 @@
     
     
     
-    if (ISIOS8) {
+    if (ISIOS8()) {
         
         _alertController = [UIAlertController
                                               alertControllerWithTitle:_title
