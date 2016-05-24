@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "ZHAlertController.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,ZHAlertControllerDelegate>
+#import "ZHAlertControler.h"
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,28 +25,13 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    ZHAlertControllerType type ;
-    
-    if (indexPath.row == 0) {
-        
-        type = ZHAlertControllerTypeAlertView;
-    }else {
-    
-        type = ZHAlertControllerTypeActionSheet;
-        
+    ZHAlertControlerStyle style = ZHAlertControlerStyleAlertView;
+    if (indexPath.row == 1) {
+        style = ZHAlertControlerStyleActionSheet;
     }
-    ZHAlertController *alerController =[[ZHAlertController alloc]initWithdDelegate:self type:type title:@"测试ZHAlertControoler" message:@""];
-    [alerController showInController:self];
-    
+    [[ZHAlertControler alertControllerWithStyle:style title:@"这是标题" message:@"这是描述" cannelButton:@"取消" otherButtons:@[@"其他"] complete:^(ZHAlertControler * _Nonnull controller) {
+        
+    }] showInController:self];
 }
-- (NSArray<NSString *> *)buttonNamesWithAlertController:(ZHAlertController *)alertController {
 
-    if (alertController.type == ZHAlertControllerTypeAlertView) {
-        return @[@"确定",@"取消"];
-    }else {
-    
-        return @[@"相机",@"相册",@"取消"];
-    }
-}
 @end

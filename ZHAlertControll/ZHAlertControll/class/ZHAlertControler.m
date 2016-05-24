@@ -11,18 +11,16 @@
 #define ZHWeakSelf __weak typeof(self) weakSelf=self
 #define ZHStrongSelf __strong typeof(weakSelf) strongSelf=weakSelf;
 
-
-
 NS_ASSUME_NONNULL_BEGIN
 /*!
- *  @brief 储存ZHAlertController的对象 防止局部变量呗释放掉
+ *  @brief 储存ZHAlertController的对象 防止局部变量被释放掉
  */
 static NSMutableArray *ZHAlertControlerArray;
 @implementation ZHAlertControler{
     NSString *_title,*_message,*_cannelButton;
     NSArray *_otherButtons;
     ZHAlertControlerDidSelectComplete _complete;
-    UIWindow *_oldKeyWindow;
+    UIAlertActionStyle (^_configAlertActionStyleBlock)(NSUInteger buttonIndex);
 }
 -(void)dealloc{
     NSLog(@"ZHAlertControler dealloc = %@",@(self.currentSelectButtonIndex));
@@ -43,19 +41,16 @@ static NSMutableArray *ZHAlertControlerArray;
         if (!ZHAlertControlerArray) {
             ZHAlertControlerArray =[NSMutableArray array];
         }
-        [self _initView];
-        
         
     }
     return self;
 }
 -(instancetype)init{
     if (self=[self initAlertControllerWithStyle:ZHAlertControlerStyleAlertView title:nil message:nil cannelButton:@"取消" otherButtons:nil complete:nil]) {
-        
     }
     return self;
 }
--(void)_initView{
+-(void)drawInitView{
     ZHWeakSelf;
     _currentSelectButtonIndex=ZHAlertControlerButtonStyleCannel;
     switch (_style) {
@@ -67,19 +62,23 @@ static NSMutableArray *ZHAlertControlerArray;
                     alertControllerStyle=UIAlertControllerStyleActionSheet;
                 }
                 _alertController=[UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:alertControllerStyle];
+                __block  UIAlertActionStyle style = UIAlertActionStyleCancel;
                 if (_cannelButton) {
-                    UIAlertAction *cannelAction=[self actionWithTitle:_cannelButton style:UIAlertActionStyleCancel handler:nil];
+                    if(_configAlertActionStyleBlock){
+                        style = _configAlertActionStyleBlock(_currentSelectButtonIndex);
+                    }
+                    UIAlertAction *cannelAction=[self actionWithTitle:_cannelButton style:style handler:nil];
                     cannelAction.tag=_currentSelectButtonIndex;
                     [_alertController addAction:cannelAction];
                 }
                 if (_otherButtons.count>0) {
                     [_otherButtons enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                         ZHStrongSelf;
-                        
-                        UIAlertAction *otherAction=[strongSelf actionWithTitle:obj style:UIAlertActionStyleDefault handler:nil];
-                        //                        //                        UIAlertAction *otherAction=[UIAlertAction actionWithTitle:obj style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                        //                        //                            [strongSelf alertActionComplete:action];
-                        //                    }];
+                        style =  UIAlertActionStyleDefault;
+                        if(strongSelf->_configAlertActionStyleBlock){
+                            style = strongSelf->_configAlertActionStyleBlock(strongSelf->_currentSelectButtonIndex);
+                        }
+                        UIAlertAction *otherAction=[strongSelf actionWithTitle:obj style:style handler:nil];
                         strongSelf->_currentSelectButtonIndex++;
                         otherAction.tag=strongSelf->_currentSelectButtonIndex;
                         [strongSelf->_alertController addAction:otherAction];
@@ -123,6 +122,8 @@ static NSMutableArray *ZHAlertControlerArray;
     }
 }
 -(UIAlertAction *)actionWithTitle:(nullable NSString *)title style:(UIAlertActionStyle)style handler:(void (^ __nullable)(UIAlertAction *action))handler{
+    
+    
     ZHWeakSelf;
     return [UIAlertAction actionWithTitle:title style:style handler:^(UIAlertAction * _Nonnull action) {
         ZHStrongSelf;
@@ -131,13 +132,12 @@ static NSMutableArray *ZHAlertControlerArray;
 }
 -(void)showInController:(UIViewController *)controller{
     NSParameterAssert(controller);
+    [self drawInitView];
     [ZHAlertControlerArray addObject:self];
     switch (_style) {
         case ZHAlertControlerStyleAlertView:
         case ZHAlertControlerStyleActionSheet:{
             if (ZHIsMoreThanIOS8) {
-                BOOL isViewController=[controller isKindOfClass:[UIViewController class]];
-                NSAssert(isViewController, @"more than IOS8 must be use UIViewController to present UIAlertController");
                 [controller presentViewController:_alertController animated:YES completion:nil];
             }else{
                 if (_style==ZHAlertControlerStyleAlertView) {
@@ -158,14 +158,18 @@ static NSMutableArray *ZHAlertControlerArray;
     if (_complete) {
         _complete(self);
     }
-    if (_oldKeyWindow) {
-        [_oldKeyWindow makeKeyAndVisible];
-    }
     [ZHAlertControlerArray removeObject:self];
 }
 -(void)alertActionComplete:(UIAlertAction *)action{
     
     [self completeWithButtonIndex:action.tag];
+}
+
+
+#pragma mark 用户自定义
+- (instancetype)alertActionStyle:(UIAlertActionStyle (^)(NSUInteger buttonIndex))styleBlock {
+    _configAlertActionStyleBlock = styleBlock;
+    return self;
 }
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

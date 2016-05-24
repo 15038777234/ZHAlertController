@@ -13,7 +13,7 @@
 		5D2E0B591BF9660100FF94A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E0B571BF9660100FF94A5 /* Main.storyboard */; };
 		5D2E0B5B1BF9660100FF94A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E0B5A1BF9660100FF94A5 /* Assets.xcassets */; };
 		5D2E0B5E1BF9660100FF94A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E0B5C1BF9660100FF94A5 /* LaunchScreen.storyboard */; };
-		5D2E0B681BF966CB00FF94A5 /* ZHAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E0B671BF966CB00FF94A5 /* ZHAlertController.m */; };
+		A8EC41DE1F5FF2866F46B9D7 /* ZHAlertControler.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EC40A638EC6A4B9BFB782F /* ZHAlertControler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		5D2E0B5A1BF9660100FF94A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D2E0B5D1BF9660100FF94A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D2E0B5F1BF9660100FF94A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D2E0B661BF966CB00FF94A5 /* ZHAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAlertController.h; sourceTree = "<group>"; };
-		5D2E0B671BF966CB00FF94A5 /* ZHAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAlertController.m; sourceTree = "<group>"; };
+		A8EC40A638EC6A4B9BFB782F /* ZHAlertControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAlertControler.m; sourceTree = "<group>"; };
+		A8EC4E00A3E97DA76D91B401 /* ZHAlertControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAlertControler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 		5D2E0B651BF966B300FF94A5 /* class */ = {
 			isa = PBXGroup;
 			children = (
-				5D2E0B661BF966CB00FF94A5 /* ZHAlertController.h */,
-				5D2E0B671BF966CB00FF94A5 /* ZHAlertController.m */,
+				A8EC4E00A3E97DA76D91B401 /* ZHAlertControler.h */,
+				A8EC40A638EC6A4B9BFB782F /* ZHAlertControler.m */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -163,10 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D2E0B681BF966CB00FF94A5 /* ZHAlertController.m in Sources */,
 				5D2E0B561BF9660100FF94A5 /* ViewController.m in Sources */,
 				5D2E0B531BF9660100FF94A5 /* AppDelegate.m in Sources */,
 				5D2E0B501BF9660100FF94A5 /* main.m in Sources */,
+				A8EC41DE1F5FF2866F46B9D7 /* ZHAlertControler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

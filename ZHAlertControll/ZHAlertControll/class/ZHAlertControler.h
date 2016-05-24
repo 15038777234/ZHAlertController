@@ -9,18 +9,12 @@
 #import <UIKit/UIKit.h>
 
 //#define ZHAlertControlerDebug //是否开启调试
-
-
-
 #define ZHIsMoreThanIOS8 NSFoundationVersionNumber>=NSFoundationVersionNumber_iOS_8_0
-
 #ifdef ZHAlertControlerDebug
 #warning @"开启ZHAlertControlerDebug可以轻松调试IOS8以上和IOS以下的代码运行情况"
-
 #undef ZHIsMoreThanIOS8
 #define ZHIsMoreThanIOS8 NO
 #endif
-
 
 NS_ASSUME_NONNULL_BEGIN
 @class ZHAlertControler;
@@ -53,7 +47,6 @@ typedef NS_ENUM(NSInteger,ZHAlertControlerButtonStyle) {
  */
 typedef void(^ZHAlertControlerDidSelectComplete)(ZHAlertControler *controller);
 
-
 /*!
  *  @brief 自定义封装的基于UIAlertView UIActionSheet 支持8.0以后的UIAlertController
  */
@@ -67,9 +60,8 @@ typedef void(^ZHAlertControlerDidSelectComplete)(ZHAlertControler *controller);
  */
 @property (nullable,nonatomic, strong,readonly) UIActionSheet *actionSheet;
 /*!
- *  @brief 当IOS8以上 ZHAlertControlerStyleAlertView或者ZHAlertControlerStyleActionSheet 才存在 否则为nil
+ *  @brief 当IOS8以上才存在 否则为nil
  */
-
 @property (nullable,nonatomic, strong,readonly) UIAlertController *alertController;
 /*!
  *  @brief 当前展示的类型 目前只支持系统的UIAlertController UIAlertView UIActionSheet
@@ -103,6 +95,9 @@ typedef void(^ZHAlertControlerDidSelectComplete)(ZHAlertControler *controller);
  *  @param controller 展示试图所在的UIViewController
  */
 -(void)showInController:(UIViewController *)controller;
+
+#pragma mark 用户自定义
+-(instancetype)alertActionStyle:(UIAlertActionStyle (^)(NSUInteger buttonIndex))styleBlock;
 @end
 /*!
  *  @brief 用户设置UIAlertAction的索引
