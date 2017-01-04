@@ -43,7 +43,7 @@ static NSMutableArray *ZHAlertControllerArray;
         case ZHAlertControllerStyleAlertView:
         case ZHAlertControllerStyleActionSheet: {
                 UIAlertControllerStyle alertControllerStyle=UIAlertControllerStyleAlert;
-                if (_style==ZHAlertControllerStyleAlertView) {
+                if (_style == ZHAlertControllerStyleActionSheet) {
                     alertControllerStyle=UIAlertControllerStyleActionSheet;
                 }
                 _alertController=[UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:alertControllerStyle];
