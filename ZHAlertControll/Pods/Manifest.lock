@@ -1,0 +1,12 @@
+PODS:
+  - ZHAlertController2 (1.0.2)
+
+DEPENDENCIES:
+  - ZHAlertController2
+
+SPEC CHECKSUMS:
+  ZHAlertController2: ca3a619b5b01aca4af404b434e4e0be9c4612963
+
+PODFILE CHECKSUM: 7f2e255519093bb31bc69a9de1e3e636f781cb42
+
+COCOAPODS: 1.1.1

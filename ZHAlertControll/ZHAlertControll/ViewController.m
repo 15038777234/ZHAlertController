@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZHAlertController.h"
+#import <ZHAlertController2/ZHAlertController.h>
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource, ZHAlertControllerDelegate>
 
 @end
@@ -36,11 +36,11 @@
 
 #pragma mark - ZHAlertControllerDelegate
 - (void)alertControllerDidClickCancelButton:(ZHAlertController *)alertController {
-
+    NSLog(@"你点击了取消按钮");
 }
 
 - (void)alertController:(ZHAlertController *)alertController didClickOtherButtonAtIndex:(NSInteger)otherButtonIndex {
-
+    NSLog(@"你点击了其他按钮");
 }
 
 @end
