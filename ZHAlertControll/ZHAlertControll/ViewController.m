@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "ZHAlertControler.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "ZHAlertController.h"
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, ZHAlertControllerDelegate>
 
 @end
 
@@ -25,13 +25,22 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZHAlertControlerStyle style = ZHAlertControlerStyleAlertView;
+    ZHAlertControllerStyle style = ZHAlertControllerStyleAlertView;
     if (indexPath.row == 1) {
-        style = ZHAlertControlerStyleActionSheet;
+        style = ZHAlertControllerStyleActionSheet;
     }
-    [[ZHAlertControler alertControllerWithStyle:style title:@"这是标题" message:@"这是描述" cannelButton:@"取消" otherButtons:@[@"其他"] complete:^(ZHAlertControler * _Nonnull controller) {
-        
-    }] showInController:self];
+    ZHAlertController *controller = [[ZHAlertController alloc] initWithStyle:style title:@"这是标题" message:@"这是描述" cannelButton:@"取消" otherButtons:@[@"其他按钮"]];
+    controller.delegate = self;
+    [controller showInController:self];
+}
+
+#pragma mark - ZHAlertControllerDelegate
+- (void)alertControllerDidClickCancelButton:(ZHAlertController *)alertController {
+
+}
+
+- (void)alertController:(ZHAlertController *)alertController didClickOtherButtonAtIndex:(NSInteger)otherButtonIndex {
+
 }
 
 @end
