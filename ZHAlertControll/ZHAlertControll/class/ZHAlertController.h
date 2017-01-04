@@ -69,7 +69,7 @@ typedef NS_ENUM(NSInteger,ZHAlertControlerButtonStyle) {
  * @param otherButtons 其他的按钮数组 可以为空
  * @return ZHAlertController
  */
--(instancetype)initWithStyle:(ZHAlertControllerStyle)style title:(NSString * _Nullable)title message:(NSString * _Nullable)message cannelButton:(NSString * )cancelButton otherButtons:(NSArray * _Nullable)otherButtons NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithStyle:(ZHAlertControllerStyle)style title:(NSString * _Nullable)title message:(NSString * _Nullable)message cannelButton:(NSString * )cancelButton otherButtons:(NSArray * _Nullable)otherButtons;
 /*!
  *  @brief 展示试图
  *
