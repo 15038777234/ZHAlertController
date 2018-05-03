@@ -13,13 +13,38 @@
 		5D2E0B591BF9660100FF94A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E0B571BF9660100FF94A5 /* Main.storyboard */; };
 		5D2E0B5B1BF9660100FF94A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E0B5A1BF9660100FF94A5 /* Assets.xcassets */; };
 		5D2E0B5E1BF9660100FF94A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E0B5C1BF9660100FF94A5 /* LaunchScreen.storyboard */; };
-		84E66D2D153E6881C658FC09 /* Pods_ZHAlertControll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D34B8BE5BAFC46A951B612A /* Pods_ZHAlertControll.framework */; };
+		5DCBE722209B010800759456 /* ZHAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCBE71B209B010700759456 /* ZHAlertController.framework */; };
+		5DCBE723209B010800759456 /* ZHAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCBE71B209B010700759456 /* ZHAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DCBE72B209B014700759456 /* ZHAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DCBE729209B014700759456 /* ZHAlertController.h */; };
+		5DCBE72C209B014700759456 /* ZHAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBE72A209B014700759456 /* ZHAlertController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5DCBE720209B010800759456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D2E0B431BF9660100FF94A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DCBE71A209B010700759456;
+			remoteInfo = ZHAlertController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5DCBE727209B010800759456 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5DCBE723209B010800759456 /* ZHAlertController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		190E85CE57779933FC307CBF /* Pods-ZHAlertControll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHAlertControll.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHAlertControll/Pods-ZHAlertControll.release.xcconfig"; sourceTree = "<group>"; };
-		3D34B8BE5BAFC46A951B612A /* Pods_ZHAlertControll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHAlertControll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D2E0B4B1BF9660100FF94A5 /* ZHAlertControll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHAlertControll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D2E0B4B1BF9660100FF94A5 /* ZHAlertController Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZHAlertController Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2E0B4F1BF9660100FF94A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D2E0B511BF9660100FF94A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D2E0B521BF9660100FF94A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,7 +54,11 @@
 		5D2E0B5A1BF9660100FF94A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D2E0B5D1BF9660100FF94A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D2E0B5F1BF9660100FF94A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCAB86DB98C69A12F719B1C6 /* Pods-ZHAlertControll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHAlertControll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHAlertControll/Pods-ZHAlertControll.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCBE715209AFF4800759456 /* ZHAlertController2.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = ZHAlertController2.podspec; path = ../../ZHAlertController2.podspec; sourceTree = "<group>"; };
+		5DCBE71B209B010700759456 /* ZHAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZHAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DCBE71E209B010800759456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DCBE729209B014700759456 /* ZHAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAlertController.h; sourceTree = "<group>"; };
+		5DCBE72A209B014700759456 /* ZHAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAlertController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,42 +66,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E66D2D153E6881C658FC09 /* Pods_ZHAlertControll.framework in Frameworks */,
+				5DCBE722209B010800759456 /* ZHAlertController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DCBE717209B010700759456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E5C8A990EBE1A64268E725B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3D34B8BE5BAFC46A951B612A /* Pods_ZHAlertControll.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5D2E0B421BF9660100FF94A5 = {
 			isa = PBXGroup;
 			children = (
-				5D2E0B4D1BF9660100FF94A5 /* ZHAlertControll */,
+				5D2E0B4D1BF9660100FF94A5 /* ZHAlertController Example */,
+				5DCBE71C209B010800759456 /* ZHAlertController */,
 				5D2E0B4C1BF9660100FF94A5 /* Products */,
-				D8FEF8E508EA4013938BC926 /* Pods */,
-				4E5C8A990EBE1A64268E725B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		5D2E0B4C1BF9660100FF94A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D2E0B4B1BF9660100FF94A5 /* ZHAlertControll.app */,
+				5D2E0B4B1BF9660100FF94A5 /* ZHAlertController Example.app */,
+				5DCBE71B209B010700759456 /* ZHAlertController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D2E0B4D1BF9660100FF94A5 /* ZHAlertControll */ = {
+		5D2E0B4D1BF9660100FF94A5 /* ZHAlertController Example */ = {
 			isa = PBXGroup;
 			children = (
+				5DCBE715209AFF4800759456 /* ZHAlertController2.podspec */,
 				5D2E0B511BF9660100FF94A5 /* AppDelegate.h */,
 				5D2E0B521BF9660100FF94A5 /* AppDelegate.m */,
 				5D2E0B541BF9660100FF94A5 /* ViewController.h */,
@@ -83,6 +112,7 @@
 				5D2E0B5F1BF9660100FF94A5 /* Info.plist */,
 				5D2E0B4E1BF9660100FF94A5 /* Supporting Files */,
 			);
+			name = "ZHAlertController Example";
 			path = ZHAlertControll;
 			sourceTree = "<group>";
 		};
@@ -94,37 +124,75 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D8FEF8E508EA4013938BC926 /* Pods */ = {
+		5DCBE71C209B010800759456 /* ZHAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				DCAB86DB98C69A12F719B1C6 /* Pods-ZHAlertControll.debug.xcconfig */,
-				190E85CE57779933FC307CBF /* Pods-ZHAlertControll.release.xcconfig */,
+				5DCBE728209B014700759456 /* Source */,
+				5DCBE71E209B010800759456 /* Info.plist */,
 			);
-			name = Pods;
+			path = ZHAlertController;
+			sourceTree = "<group>";
+		};
+		5DCBE728209B014700759456 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5DCBE729209B014700759456 /* ZHAlertController.h */,
+				5DCBE72A209B014700759456 /* ZHAlertController.m */,
+			);
+			name = Source;
+			path = ../../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5DCBE718209B010700759456 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DCBE72B209B014700759456 /* ZHAlertController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		5D2E0B4A1BF9660100FF94A5 /* ZHAlertControll */ = {
+		5D2E0B4A1BF9660100FF94A5 /* ZHAlertController Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D2E0B621BF9660100FF94A5 /* Build configuration list for PBXNativeTarget "ZHAlertControll" */;
+			buildConfigurationList = 5D2E0B621BF9660100FF94A5 /* Build configuration list for PBXNativeTarget "ZHAlertController Example" */;
 			buildPhases = (
-				A5A96BFE04F34F6452F9E6A5 /* [CP] Check Pods Manifest.lock */,
 				5D2E0B471BF9660100FF94A5 /* Sources */,
 				5D2E0B481BF9660100FF94A5 /* Frameworks */,
 				5D2E0B491BF9660100FF94A5 /* Resources */,
-				929BC8D549D1ACD71A7FC585 /* [CP] Embed Pods Frameworks */,
-				ACB3779873EE9B1548E9E578 /* [CP] Copy Pods Resources */,
+				5DCBE727209B010800759456 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DCBE721209B010800759456 /* PBXTargetDependency */,
+			);
+			name = "ZHAlertController Example";
+			productName = ZHAlertControll;
+			productReference = 5D2E0B4B1BF9660100FF94A5 /* ZHAlertController Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DCBE71A209B010700759456 /* ZHAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DCBE724209B010800759456 /* Build configuration list for PBXNativeTarget "ZHAlertController" */;
+			buildPhases = (
+				5DCBE716209B010700759456 /* Sources */,
+				5DCBE717209B010700759456 /* Frameworks */,
+				5DCBE718209B010700759456 /* Headers */,
+				5DCBE719209B010700759456 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZHAlertControll;
-			productName = ZHAlertControll;
-			productReference = 5D2E0B4B1BF9660100FF94A5 /* ZHAlertControll.app */;
-			productType = "com.apple.product-type.application";
+			name = ZHAlertController;
+			productName = ZHAlertController;
+			productReference = 5DCBE71B209B010700759456 /* ZHAlertController.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -138,6 +206,10 @@
 					5D2E0B4A1BF9660100FF94A5 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = L537G5HS6E;
+					};
+					5DCBE71A209B010700759456 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -154,7 +226,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5D2E0B4A1BF9660100FF94A5 /* ZHAlertControll */,
+				5D2E0B4A1BF9660100FF94A5 /* ZHAlertController Example */,
+				5DCBE71A209B010700759456 /* ZHAlertController */,
 			);
 		};
 /* End PBXProject section */
@@ -170,55 +243,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DCBE719209B010700759456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		929BC8D549D1ACD71A7FC585 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHAlertControll/Pods-ZHAlertControll-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5A96BFE04F34F6452F9E6A5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		ACB3779873EE9B1548E9E578 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHAlertControll/Pods-ZHAlertControll-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D2E0B471BF9660100FF94A5 /* Sources */ = {
@@ -231,7 +263,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DCBE716209B010700759456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DCBE72C209B014700759456 /* ZHAlertController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DCBE721209B010800759456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DCBE71A209B010700759456 /* ZHAlertController */;
+			targetProxy = 5DCBE720209B010800759456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5D2E0B571BF9660100FF94A5 /* Main.storyboard */ = {
@@ -335,7 +383,6 @@
 		};
 		5D2E0B631BF9660100FF94A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCAB86DB98C69A12F719B1C6 /* Pods-ZHAlertControll.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -349,7 +396,6 @@
 		};
 		5D2E0B641BF9660100FF94A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 190E85CE57779933FC307CBF /* Pods-ZHAlertControll.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -358,6 +404,80 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghang.zhalertControll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5DCBE725209B010800759456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ZHAlertController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.globalegrow.ZHAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5DCBE726209B010800759456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ZHAlertController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.globalegrow.ZHAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -373,11 +493,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D2E0B621BF9660100FF94A5 /* Build configuration list for PBXNativeTarget "ZHAlertControll" */ = {
+		5D2E0B621BF9660100FF94A5 /* Build configuration list for PBXNativeTarget "ZHAlertController Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D2E0B631BF9660100FF94A5 /* Debug */,
 				5D2E0B641BF9660100FF94A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DCBE724209B010800759456 /* Build configuration list for PBXNativeTarget "ZHAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DCBE725209B010800759456 /* Debug */,
+				5DCBE726209B010800759456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

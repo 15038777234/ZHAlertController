@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <ZHAlertController2/ZHAlertController.h>
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource, ZHAlertControllerDelegate>
 
 @end

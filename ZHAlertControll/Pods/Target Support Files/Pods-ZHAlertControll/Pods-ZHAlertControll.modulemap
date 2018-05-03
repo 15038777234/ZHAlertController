@@ -1,6 +1,0 @@
-framework module Pods_ZHAlertControll {
-  umbrella header "Pods-ZHAlertControll-umbrella.h"
-
-  export *
-  module * { export * }
-}
