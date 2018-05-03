@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/josercc/ZHAlertController.git", :tag => "#{s.version}" }
   s.vendored_framework  = "Carthage/Build/iOS/ZHAlertController.framework"
-  s.prepare_command = "/bin/zsh Carthage"
+  s.prepare_command = "/usr/local/bin/carthage update --platform ios"
 end
