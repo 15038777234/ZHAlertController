@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "ZHAlertController2"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "可以很方便的调用系统的UIAlertController"
   s.homepage     = "https://github.com/josercc/ZHAlertController"
   s.license      = "MIT"

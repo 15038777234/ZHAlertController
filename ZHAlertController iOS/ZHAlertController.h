@@ -40,11 +40,11 @@ typedef void (^ZHAlertControllerDidSelectComplete)(ZHAlertController * _Nullable
 /**
  * 创建输入框的回调函数 如果返回 NO 则停止创建 如果是 YES继续创建
 
- @param textFiled 当前需要配置的UITextField对象
+ @param textField 当前需要配置的UITextField对象
  @param idx 索引
  @return 如果返回 NO 则停止创建 如果是 YES继续创建
  */
-typedef BOOL (^ZHAlertControllerAddTextFiledWithConfigurationHandler)(UITextField * _Nullable textFiled, NSUInteger idx);
+typedef BOOL (^ZHAlertControllerAddtextFieldWithConfigurationHandler)(UITextField * _Nullable textField, NSUInteger idx);
 
 
 @interface ZHAlertController : NSObject
@@ -91,7 +91,7 @@ typedef BOOL (^ZHAlertControllerAddTextFiledWithConfigurationHandler)(UITextFiel
  @param message 描述信息
  @param cannelButton 取消按钮
  @param otherButtons 其他的按钮文本
- @param addTextFiledWithConfigurationHandle 添加输入框
+ @param addtextFieldWithConfigurationHandle 添加输入框
  @return ZHAlertController
  */
 + (instancetype _Nullable )alertControllerWithStyle:(ZHAlertControllerStyle)style
@@ -99,7 +99,7 @@ typedef BOOL (^ZHAlertControllerAddTextFiledWithConfigurationHandler)(UITextFiel
                                             message:(NSString *_Nullable)message
                                        cannelButton:(NSString *_Nullable)cannelButton
                                        otherButtons:(NSArray<NSString *> *_Nullable)otherButtons
-                addTextFiledWithConfigurationHandle:(ZHAlertControllerAddTextFiledWithConfigurationHandler _Nullable)addTextFiledWithConfigurationHandle
+                addtextFieldWithConfigurationHandle:(ZHAlertControllerAddtextFieldWithConfigurationHandler _Nullable)addtextFieldWithConfigurationHandle
                                            complete:(ZHAlertControllerDidSelectComplete _Nullable)complete;
 
 /*!

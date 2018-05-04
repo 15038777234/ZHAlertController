@@ -20,7 +20,7 @@ static NSMutableArray *ZHAlertControlerArray;
     NSString *_title,*_message,*_cannelButton;
     NSArray *_otherButtons;
     ZHAlertControllerDidSelectComplete _complete;
-    ZHAlertControllerAddTextFiledWithConfigurationHandler _addTextFiledWithConfigurationHandler;
+    ZHAlertControllerAddtextFieldWithConfigurationHandler _addtextFieldWithConfigurationHandler;
 }
 
 #pragma mark - Life Cycle
@@ -35,7 +35,7 @@ static NSMutableArray *ZHAlertControlerArray;
                                   message:message
                              cannelButton:cannelButton
                              otherButtons:otherButtons
-      addTextFiledWithConfigurationHandle:nil
+      addtextFieldWithConfigurationHandle:nil
                                  complete:complete];
 }
 
@@ -44,14 +44,14 @@ static NSMutableArray *ZHAlertControlerArray;
                                  message:(NSString *)message
                             cannelButton:(NSString *)cannelButton
                             otherButtons:(NSArray<NSString *> *)otherButtons
-     addTextFiledWithConfigurationHandle:(ZHAlertControllerAddTextFiledWithConfigurationHandler)addTextFiledWithConfigurationHandle
+     addtextFieldWithConfigurationHandle:(ZHAlertControllerAddtextFieldWithConfigurationHandler)addtextFieldWithConfigurationHandle
                                 complete:(ZHAlertControllerDidSelectComplete)complete {
     return [[ZHAlertController alloc] initAlertControllerWithStyle:style
                                                              title:title
                                                            message:message
                                                       cannelButton:cannelButton
                                                       otherButtons:otherButtons
-                               addTextFiledWithConfigurationHandle:addTextFiledWithConfigurationHandle
+                               addtextFieldWithConfigurationHandle:addtextFieldWithConfigurationHandle
                                                           complete:complete];
 }
 
@@ -60,7 +60,7 @@ static NSMutableArray *ZHAlertControlerArray;
                                      message:(NSString *)message
                                 cannelButton:(NSString *)cannelButton
                                 otherButtons:(NSArray *)otherButtons
-         addTextFiledWithConfigurationHandle:(ZHAlertControllerAddTextFiledWithConfigurationHandler)addTextFiledWithConfigurationHandle
+         addtextFieldWithConfigurationHandle:(ZHAlertControllerAddtextFieldWithConfigurationHandler)addtextFieldWithConfigurationHandle
                                     complete:(ZHAlertControllerDidSelectComplete)complete {
     NSParameterAssert(cannelButton);
     if (self=[super init]) {
@@ -70,7 +70,7 @@ static NSMutableArray *ZHAlertControlerArray;
         _cannelButton=cannelButton;
         _otherButtons=otherButtons;
         _complete=complete;
-        _addTextFiledWithConfigurationHandler = addTextFiledWithConfigurationHandle;
+        _addtextFieldWithConfigurationHandler = addtextFieldWithConfigurationHandle;
         if (!ZHAlertControlerArray) {
             ZHAlertControlerArray =[NSMutableArray array];
         }
@@ -85,7 +85,7 @@ static NSMutableArray *ZHAlertControlerArray;
                                       message:nil
                                  cannelButton:@"取消"
                                  otherButtons:nil
-          addTextFiledWithConfigurationHandle:nil
+          addtextFieldWithConfigurationHandle:nil
                                      complete:nil];
 }
 
@@ -130,13 +130,13 @@ static NSMutableArray *ZHAlertControlerArray;
         }];
     }
     
-    if (_addTextFiledWithConfigurationHandler) {
+    if (_addtextFieldWithConfigurationHandler) {
         NSUInteger index = 0;
-        __block BOOL continueAddTextFiled = YES;
-        while (continueAddTextFiled) {
+        __block BOOL continueAddtextField = YES;
+        while (continueAddtextField) {
             [_alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
                 ZHStrongSelf;
-                continueAddTextFiled = strongSelf->_addTextFiledWithConfigurationHandler(textField,index);
+                continueAddtextField = strongSelf->_addtextFieldWithConfigurationHandler(textField,index);
             }];
             index ++;
         }
