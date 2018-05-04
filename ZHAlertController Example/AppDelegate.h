@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  ZHAlertControll
+//  ZHAlertController
 //
-//  Created by 张行 on 15/11/16.
-//  Copyright © 2015年 张行. All rights reserved.
+//  Created by 张行 on 2018/5/4.
+//  Copyright © 2018年 张行. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
