@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ZHAlertController.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        [[ZHAlertController alertControllerWithStyle:ZHAlertControllerStyleAlertView
+                                               title:@"这是只有标题和取消按钮的弹出框"
+                                             message:nil
+                                        cannelButton:@"取消"
+                                        otherButtons:nil
+                                            complete:nil] showInController:self];
+    }
 }
 
 
