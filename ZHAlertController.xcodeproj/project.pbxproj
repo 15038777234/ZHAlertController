@@ -58,7 +58,7 @@
 		5DAC3B25209BEBE1008A8197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DAC3B2E209BED7A008A8197 /* ZHAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHAlertController.m; sourceTree = "<group>"; };
 		5DAC3B2F209BED7A008A8197 /* ZHAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHAlertController.h; sourceTree = "<group>"; };
-		5DAC3B32209BF112008A8197 /* ZHAlertController.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZHAlertController.podspec; sourceTree = "<group>"; };
+		5DAC3B32209BF112008A8197 /* ZHAlertController2.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZHAlertController2.podspec; sourceTree = "<group>"; };
 		5DAC3B33209BF112008A8197 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5DAC3B33209BF112008A8197 /* Cartfile */,
-				5DAC3B32209BF112008A8197 /* ZHAlertController.podspec */,
+				5DAC3B32209BF112008A8197 /* ZHAlertController2.podspec */,
 				5DAC3AF4209BEB0C008A8197 /* ZHAlertController Example */,
 				5DAC3B23209BEBE1008A8197 /* ZHAlertController iOS */,
 				5DAC3AF3209BEB0C008A8197 /* Products */,
